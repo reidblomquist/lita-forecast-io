@@ -30,9 +30,9 @@ module ForecastIo
       # scale_x_area = [0, x_offset]
       # scale_y_area = [(y_offset + graph_area[:y]), area[:y]]
       scale_y_x = x_offset / 2
-      scale_y_y = (area[:y] / 2) - y_offset
+      scale_y_y = (area[:y] + y_offset)/2
       scale_x_x = title_x
-      scale_x_y = (area[:y] - (y_offset + graph_area[:y])) + (scale_text_size * 2)
+      scale_x_y = area[:y] - (title_text_size / 2)
       scale_x_title = "Minutes"
       scale_x_subtitle = "(0-60)"
       scale_y_title = "Precipitation Chance"
